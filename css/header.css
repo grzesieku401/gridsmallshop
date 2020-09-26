@@ -4,7 +4,7 @@ body{
   background: linear-gradient(to bottom, #DDEFBB, #FFEEEE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   height: 100vh;
   display: grid;
-  grid-template-columns: 30px auto 30px;
+  grid-template-columns: 40px auto 40px;
   grid-template-rows: repeat(4, max-content);
   grid-row-gap: 20px;
   font-family: 'Merriweather Sans', sans-serif;
@@ -80,10 +80,11 @@ a:active{
   justify-content: center;
 }
 .site-header_food-price{
-  padding: 0px 20px;
+  padding: 5px 20px 1px 20px;
 }
 .site-header_food-desc{
-  padding-top: 5px;;
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-size: 0.8rem;
 }
 
@@ -100,13 +101,13 @@ a:active{
 }
 
 .site-header_site-title{
-  margin-top: 70px;
+  margin-top: 150px;
   font-size: 2rem;
 }
 .site-header_site-subtitle{
   margin-top: 20px;
   margin-left: 20px;
-  margin-bottom: 70px;
+  margin-bottom: 150px;
   font-size: 0.9rem;
 }
 
@@ -133,6 +134,6 @@ a:active{
   }
   .site-header_image-wrapper{
     grid-column: 1;
-    grid-row: 1;  
+    grid-row: 1;
   }
 }
