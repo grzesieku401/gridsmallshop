@@ -1,4 +1,18 @@
 .site-footer{
-  background: lightgray;
   grid-column: 2 / 3
+}
+
+.site-footer_title{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  background-color: lightgray;
+}
+
+.site-footer_image-wrapper{
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+  grid-gap: 15px;
+  margin-bottom: 15px;
 }

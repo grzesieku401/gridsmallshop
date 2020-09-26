@@ -78,6 +78,11 @@
   .site-main_wrapper{
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .site-main_service-promoted img {
+
+    padding: 1px;
+  }
 }
 
 @media all and (max-width: 300px){
