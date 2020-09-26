@@ -3,4 +3,80 @@ body{
   background: -webkit-linear-gradient(to bottom, #DDEFBB, #FFEEEE);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to bottom, #DDEFBB, #FFEEEE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   height: 100vh;
+  display: grid;
+  grid-template-columns: 30px auto 30px;
+  grid-template-rows: repeat(4, max-content);
+  grid-row-gap: 20px;
+  font-family: 'Merriweather Sans', sans-serif;
+  color: #1b1a1a;
+}
+
+.site-nav{
+  grid-column: 2 / 3
+}
+
+.site-nav_menu-button{
+  display: none;
+}
+
+.site-nav_menu-button::selection{
+  background-color: white;
+  display: none;
+}
+
+.site-nav_menu-button .site-nav_menu-button-x{
+  display: none;
+}
+
+.site-nav_food-menu{
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, auto));
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  text-align: center;
+}
+
+
+.site-nav_food-option{
+  font-weight: bolder;
+  text-shadow: 0px 2px rgba(153, 149, 148, 0.3);
+  padding: 15px 10px;
+  background-color: #f5d258;
+}
+
+
+.site-header{
+  background: gray;
+  grid-column: 2 / 3
+}
+
+/* unvisited link */
+a:link {
+ color: #000;
+ text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: #000;
+}
+
+/* mouse over link */
+a:hover {
+  color: #000;
+}
+
+/* selected link */
+a:active {
+  color: #000;
+}
+
+@media all and (max-width: 700px) {
+  .site-nav_menu-button{
+    display: inline-block;
+    padding: 12px 40px;
+    margin-top: 20px;
+    background-color: #f5d258;
+  }
 }
