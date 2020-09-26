@@ -19,7 +19,7 @@ body{
   display: none;
 }
 
-.site-nav_menu-button::selection{
+.site-nav_menu-button:active{
   background-color: white;
   display: none;
 }
@@ -31,9 +31,8 @@ body{
 .site-nav_food-menu{
   margin-top: 40px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, auto));
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+  grid-gap: 10px;
   text-align: center;
 }
 
@@ -41,36 +40,76 @@ body{
 .site-nav_food-option{
   font-weight: bolder;
   text-shadow: 0px 2px rgba(153, 149, 148, 0.3);
-  padding: 15px 10px;
+  padding: 15px 0px;
   background-color: #f5d258;
 }
 
+a:link,
+a:visited,
+a:hover,
+a:active{
+  color: #000;
+  text-decoration: none;
+}
 
 .site-header{
-  background: gray;
-  grid-column: 2 / 3
+  display: grid;
+  grid-column: 2 / 3;
+  grid-template-columns:  repeat(3, 1fr);
+  grid-gap: 15px;
 }
 
-/* unvisited link */
-a:link {
- color: #000;
- text-decoration: none;
+.site-header_food-price{
+  font-size: 2.4rem;
 }
 
-/* visited link */
-a:visited {
-  color: #000;
+.site-header_image-wrapper{
+  grid-column: span 2;
+  grid-row: span 2;
+  background-image: url('../img/maintable.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-/* mouse over link */
-a:hover {
-  color: #000;
+.site-header_food-ad{
+  background-color: #f5d258;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.site-header_food-price{
+  padding: 0px 20px;
+}
+.site-header_food-desc{
+  padding-top: 5px;;
+  font-size: 0.8rem;
 }
 
-/* selected link */
-a:active {
-  color: #000;
+.site-header_site-title,
+.site-header_site-subtitle{
+  padding-right: auto;
+  margin-left: 20px;
 }
+
+.site-header_site-title-span{
+  background-color: #f5d258;
+  padding: 0 5px;
+  line-height: 2.5rem;
+}
+
+.site-header_site-title{
+  margin-top: 70px;
+  font-size: 2rem;
+}
+.site-header_site-subtitle{
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 70px;
+  font-size: 0.9rem;
+}
+
 
 @media all and (max-width: 700px) {
   .site-nav_menu-button{
@@ -78,5 +117,22 @@ a:active {
     padding: 12px 40px;
     margin-top: 20px;
     background-color: #f5d258;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .site-header{
+    grid-template-columns:  repeat(2, 1fr);
+  }
+}
+
+@media all and (max-width: 400px) {
+  .site-header{
+    grid-template-columns:  1fr;
+
+  }
+  .site-header_image-wrapper{
+    grid-column: 1;
+    grid-row: 1;  
   }
 }
